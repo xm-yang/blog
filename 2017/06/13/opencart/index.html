@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Max&#39;s Open Development Memo</title>
+  <title>opencart 在Mac下使用Valet的开发指南 | Max&#39;s Open Development Memo</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -134,7 +134,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">undefined</a></li>
+                        <li id="navbar-title"><a href="#">opencart 在Mac下使用Valet的开发指南</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -153,169 +153,68 @@
 
 
 <!-- -->
-<!--<body class="home-template">-->
+<!--<body class="post-template">-->
 <!---->
   
+
 <main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+                  <div class="tag-tile">
+                      
+                  </div>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">opencart 在Mac下使用Valet的开发指南</h1>
 
-    
-    <article class="post">
+                    <div class="post-meta">
+                        Post on<span class="fa fa-clock-o"></span>
+                        <time datetime="2017-06-13T03:04:33.000Z"
+                              itemprop="datePublished">2017-06-13</time>
+                    </div>
+    </span>
 
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2017/06/13/opencart/">opencart 在Mac下使用Valet的开发指南</a>
-            </h1>
+        <section class="post-content">
+            <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>克隆安装 2.3.0.2版本（具体哪个版本自行决定）</p>
+<p>git clone <a href="https://github.com/opencart/opencart.git" target="_blank" rel="external">https://github.com/opencart/opencart.git</a></p>
+<p>git checkout 2.3.0.2</p>
+<h2 id="For-Mac-valet-developers"><a href="#For-Mac-valet-developers" class="headerlink" title="For Mac valet developers"></a>For Mac valet developers</h2><ol>
+<li><p>下载OpenCartValetDriver.php (<a href="https://gist.github.com/mikkpokk/fc1e28979b2e729119a24be37b4d747a" target="_blank" rel="external">https://gist.github.com/mikkpokk/fc1e28979b2e729119a24be37b4d747a</a></p>
+<p>), 放到 ~/.valet/Drivers下面</p>
+</li>
+<li><p>进入opencart的upload文件夹，执行valet link (把upload文件夹注册到valet链接表里)</p>
+</li>
+<li><p>rename config-dist.php to config.php</p>
+</li>
+<li><p>rename admin/config-dist.php to admin/config.php</p>
+</li>
+<li><p>如果没安装mCrypt, 需要先安装 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update</div></pre></td></tr></table></figure>
+<p>brew update后可以看到php相关的包，根据自己php版本找到相应的mcrypt包名称，比如php7.0版本的就是php70-mcrypt</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">brew upgrade # 着急的话不必要</div><div class="line">brew install php70-mcrypt</div><div class="line">brew services restart php70 # service php-fpm restart 重启php服务</div><div class="line">valet restart</div></pre></td></tr></table></figure>
+<p>注：可通过 <code>php -i | grep mcrypt</code> 来检查是否安装了mcrypt</p>
+</li>
+<li><p>访问 upload.dev ，走正常安装程序即可</p>
+</li>
+</ol>
 
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2017-06-13T03:04:33.000Z"
-                      itemprop="datePublished">2017-06-13</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                安装克隆安装 2.3.0.2版本（具体哪个版本自行决定）
-git clone https://github.com/opencart/opencart.git
-git checkout 2.3.0.2
-For Mac valet developers
-下载OpenCartValetDriver.php (https://gist.github.com/mikkpokk/fc1e28979b2e729119a24be37b4d747a
-)
-                
-            </p>
-            
         </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2017/06/12/phpdoc-tags/">phpdoc常用tag</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2017-06-12T02:44:19.000Z"
-                      itemprop="datePublished">2017-06-12</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                @api@author@category@copyright@deprecated@example@filesource@global@ignore@internal@license@link@method@package@param@property@property-read@property-write@return@see@since@source@subpackage@throws@todo@uses@var@version
-
-                
-            </p>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
             
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2017/06/09/Syncing a fork/">同步已经fork出的项目</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2017-06-08T17:57:51.000Z"
-                      itemprop="datePublished">2017-06-09</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                背景laravel开发时，会在从某一版本开始向后开发，一旦laravel有升级，则很难自己的项目与laravel保持同步，这时要应用本文的方法进行升级。注意：如果进行大版本号升级时，如5.3 -》5.4，仍然需要参考laravel升级方法
-步骤
-指定原型项目的远程地址
-1git remote add &lt;upstream&gt; https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITOR
-                
-            </p>
+            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
             
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2017/06/08/hello-world/">Hello World</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2017-06-08T09:17:02.000Z"
-                      itemprop="datePublished">2017-06-08</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new p
-                
-            </p>
+            <a class="share-button" data-original-title title>Share this Post</a>
             
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2017/06/08/hexo-starter/">在github上快速设置hexo站点</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2017-06-08T08:52:51.000Z"
-                      itemprop="datePublished">2017-06-08</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                在github上快速设置hexo站点时间：
-
-hexo环境设置（如已安装请略过）
-1npm install -g hexo-cli
-
-初始化站点
-12hexo initnpm install hexo-deployer-git --save
-
-安装主题
-1git clone &lt;theme_repository_url&gt; themes/&lt;theme_name&gt;
-
-配置git (_config.yml)
-1234de
-                
-            </p>
+            <a data-pjax class="older-posts" href="/2017/06/12/phpdoc-tags/">Next Post →</a>
             
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
         </section>
+
+
     </article>
-    
-    <nav class="pagination" role="pagination">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-    </nav>
 </main>
 
 
