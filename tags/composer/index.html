@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>在github上快速设置hexo站点 | 1st Open Knowledge System</title>
+  <title>Tag: composer | 1st Open Knowledge System</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -168,7 +168,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">在github上快速设置hexo站点</a></li>
+                        <li id="navbar-title"><a href="#">undefined</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -187,72 +187,52 @@
 
 
 <!-- -->
-<!--<body class="post-template">-->
+<!--<body class="home-template">-->
 <!---->
   
-
 <main class="content" role="main">
-    <article class="post" >
-    <span class="post-meta">
-                  <div class="tag-tile">
-                      
-                  </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D">在github上快速设置hexo站点</h1>
 
-                    <div class="post-meta">
-                        Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2017-06-08T08:52:51.000Z"
-                              itemprop="datePublished">2017-06-08</time>
-                    </div>
-    </span>
+    
+    <article class="post">
 
-        <section class="post-content">
-            <h2 id="在github上快速设置hexo站点"><a href="#在github上快速设置hexo站点" class="headerlink" title="在github上快速设置hexo站点"></a>在github上快速设置hexo站点</h2><p>时间：</p>
-<ol>
-<li><p>hexo环境设置（如已安装请略过）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
-</li>
-<li><p>初始化站点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;theme_repository_url&gt; themes/&lt;theme_name&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置git (_config.yml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository_url&gt;</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置语言 (_config.yml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure>
-</li>
-<li><p>建立更新shell脚本 update</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line"># stop on first error</div><div class="line">set -e</div><div class="line"># show command before excute</div><div class="line">set -o xtrace</div><div class="line"></div><div class="line">hexo clean</div><div class="line"></div><div class="line">hexo generate</div><div class="line"></div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>常用链接</p>
-<p>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></p>
-<p>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
-<p>Docs: <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a></p>
-<p>​</p>
-</li>
-</ol>
+        <header class="post-header">
+            <div class="tag-tile">
+                
+                
+                <a data-pjax href='/tags/composer/'>composer</a>
+                
+                <a data-pjax href='/tags/packagist/'>packagist</a>
+                
+                
+                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
+            </div>
+            <h1 class="post-title"><a data-pjax href="/2017/06/15/composer-change-repo/">使用 packagist 国内镜像加速</a>
+            </h1>
 
+            <div class="post-meta">
+                Post on<span class="fa fa-clock-o"></span>
+                <time datetime="2017-06-15T05:33:50.000Z"
+                      itemprop="datePublished">2017-06-15</time>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                目前有两个比较稳定的packagist国内镜像，一个是https://packagist.phpcomposer.com ， 另一个是 https://packagist.laravel-china.org
+使用方法很简单, 下面以第一个为例
+方法一：全局配置composer config -g repo.packagist composer https://packagist.phpcomposer.com
+方法二：按项目配置， 修改
+                
+            </p>
+            
         </section>
-        <hr/>
-        <nav class="pagination" style="width:auto" role="pagination">
-            
-            <a data-pjax class="newer-posts" href="/2017/06/08/hello-world/">← Prev Post</a>
-            
-            <a class="share-button" data-original-title title>Share this Post</a>
-            
-        </nav>
-        <br/>
-        <br/>
-        <section id="comment">
-            <div id="comment-box"></div>
-        </section>
-
-
     </article>
+    
+    <nav class="pagination" role="pagination">
+        
+        <span class="page-number">Page 1 of 1</span>
+        
+    </nav>
 </main>
 
 
