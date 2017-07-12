@@ -12,8 +12,6 @@
     
     <title>
         
-            分类: laravel | 
-        
         1st Open Knowledge System
     </title>
 
@@ -67,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: laravel | 1st Open Knowledge System">
+    <meta property="og:title" content="1st Open Knowledge System">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="Sun Jul 09 2017 21:21:40 GMT+0800" />
+        <meta property="article:modified_time" content="Wed Jul 12 2017 19:53:14 GMT+0800" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="分类: laravel | 1st Open Knowledge System">
+    <meta name="twitter:title" content="1st Open Knowledge System">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -83,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/categories/php/laravel/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/07/09/laravel项目的目录安排/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "1st Open Knowledge System",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Max Yang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "headline": "",
+    "url": "http://yoursite.com/2017/07/09/laravel项目的目录安排/index.html",
+    "datePublished": "Sun Jul 09 2017 21:21:40 GMT+0800",
+    "dateModified": "Wed Jul 12 2017 19:53:14 GMT+0800",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yoursite.com"
+    }
+}
+</script>
 
 
     
@@ -283,155 +314,254 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#laravel项目的目录安排"><span class="post-toc-number">1.</span> <span class="post-toc-text">laravel项目的目录安排</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#目的："><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">目的：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#做法："><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">做法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#示例目录结构-基于laravel-5-4"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">示例目录结构 (基于laravel 5.4)</span></a></li></ol></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/06/16/adminlte-laravel/">尝试 adminlte-laravel 快速开发程序</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            安装如果在Mac系...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/06/16/adminlte-laravel/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Max Yang's avatar">
-            </div>
-            <div>
-                <strong>Max Yang</strong>
-                <span>6月 16, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/php/">php</a>, <a class="post_category-link" href="/categories/php/laravel/">laravel</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/06/15/composer-change-repo/">使用 packagist 国内镜像加速</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            目前有两个比较稳定的packagist国内镜像，一个是
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/06/15/composer-change-repo/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Max Yang's avatar">
-            </div>
-            <div>
-                <strong>Max Yang</strong>
-                <span>6月 15, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/php/">php</a>, <a class="post_category-link" href="/categories/php/laravel/">laravel</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Max Yang</strong>
+        <span>7月 09, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0klEQVR42u3aS27jMBAFQN//0pntAIE17zXliUKWVkZg0V3cdPrz+jryeWFjY2NjY2NjY2M/kv2Kn3ff//vv30+OAop/ZRYzNjY29gnsJKwkoOt3r8HvLnF2odjY2NhnsleSUx7c7KJviBkbGxsb+zKId+e015QkSGxsbGzszyWwpERpU90vyNvY2NjYj2G3jaGoKR+379fj+WAvDRsbG/vx7HbQ+4TPPzDfxsbGxn4ku33yEe9sSJA3s+rIsbGxsTdlJ239vLnTXtns+vI2EzY2NvYJ7Lo1E5cobXBtSquHDdjY2NgHsPOh6eya1se3s5EDNjY29t7sdtVyHTNr989aWtjY2NjnsNtklqzdzK4y//U8ZWJjY2OfwJ79c58PFdqElL9VnImNjY29KXtlXWZWMPyj9ROXK3k82NjY2NhJ2siDmw2MbxhdYGNjY2/Kbhs3LWmWlvJ2VdFswsbGxt6UnRces2uaBd2m1Xo8gI2Njb0Re2XtJi8G2lWefMCcDzawsbGx92bnqzCzAe3stNlVvk2E2NjY2FuzZ5i2ib++fNMmQmxsbOwT2G3TPy8k7h0S5yOHYr6NjY2NvQU7xyTIT4wN2mbWsJeGjY2N/WvZswFqWzzMSLNzsLGxsU9jz46brWDmJUTybr1shI2Njb0pe7aIk7f4E95Ka6lobGFjY2MfwG7HtHUKuangma3+YGNjY+/KXklFeWupHfq2RcuwAsPGxsbegr1yBUmRsJIm8wcbGxsbO39mvPyi8zKmbYdhY2Nj78qeJYm8rb+y0LnyfWxsbOzT2EnSasuJ67R3VyIsEhs2Njb2Aey2WXPNmIXbXvdSKYKNjY19JDv5PEs/s9P+UwLDxsbG3o6dr1G2hUc7KrihqYSNjY29ETsfsuZrN3lyShh54YGNjY19Gnu24JikjVm47VLm9SgCGxsbe2/2OQ82NjY2NjY2Njb2Y54/PTk/cUZz5doAAAAASUVORK5CYII=">
+    
+</ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://yoursite.com/2017/07/09/laravel项目的目录安排/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=&url=http://yoursite.com/2017/07/09/laravel项目的目录安排/index.html&via=Max Yang" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/07/09/laravel项目的目录安排/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/07/09/laravel项目的目录安排/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="laravel项目的目录安排"><a href="#laravel项目的目录安排" class="headerlink" title="laravel项目的目录安排"></a>laravel项目的目录安排</h1><h3 id="目的："><a href="#目的：" class="headerlink" title="目的："></a>目的：</h3><p>模块化项目，简化多个项目的拆分和合并过程，简化laravel版本升级带来的改变。</p>
+<h3 id="做法："><a href="#做法：" class="headerlink" title="做法："></a>做法：</h3><p>以下以公司命名空间为 <em>Apple</em>， 项目名称<em>Crm</em>为例</p>
+<p><strong>主项目目录</strong> 下包含模型和控制器，在项目组合拆分时不变。</p>
+<p><strong>项目视图目录 </strong>下包含项目视图，项目组合拆分时不变。</p>
+<p><strong>可公用的视图</strong> 可以放在resources/views/vendor/[<em>Apple</em>]目录下，一般以layouts为主。</p>
+<p><strong>路由</strong> 放在独立的路由文件，通过RouteServiceProvider注册进去。</p>
+<p><strong>测试</strong> 按项目文件夹放置</p>
+<p><strong>注意</strong> 不要直接从原生的Eloquent Model，Controller继承，而要在项目中新建BaseModel和BaseController作为依赖隔离，项目中的模型和控制器均继承自BaseModel和BaseController</p>
+<h3 id="示例目录结构-基于laravel-5-4"><a href="#示例目录结构-基于laravel-5-4" class="headerlink" title="示例目录结构 (基于laravel 5.4)"></a>示例目录结构 (基于laravel 5.4)</h3><p>带*号的为项目新增文件，带[]的为项目新增目录.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">app/ : 基础设施，配置为主，少改代码，以便日后升级。</div><div class="line">	Console/</div><div class="line">		- Kernel.php : 注册 routes 下面 console 类的 routes; 注册 schedule 项目</div><div class="line">	Exceptions/</div><div class="line">		- Handler.php : excetpion 处理</div><div class="line">	Http/</div><div class="line">		Controllers/ : 基础controllers</div><div class="line">			Auth/ : 基础认证包，适度修改</div><div class="line">			- Controller.php : 基础 controller 类，不要修改</div><div class="line">		Middleware/</div><div class="line">		- Kernel.php</div><div class="line">	Providers/</div><div class="line">		- RouteServiceProvider : 注册 routes 下面 web 和 api 类的 routes</div><div class="line"></div><div class="line">[Crm]/ : 主项目目录</div><div class="line">	Http/</div><div class="line">		Controllers/</div><div class="line">			* BaseController.php : 继承自 App/Controller，所有项目controller均需从BaseController扩展</div><div class="line">			* XyzController.php : 项目相关 Controllers</div><div class="line">	Models/</div><div class="line">		- BaseModel : 继承自 Illuminate\Database\Eloquent\Model，所有项目model均需从BaseModel扩展</div><div class="line">		- 注意，多个项目的model可能会出现重名，导致表格重名，model命名尽量加入项目名</div><div class="line"></div><div class="line">bootstrap/</div><div class="line">config/</div><div class="line">database/ : 该目录下所有class都无需namespace，而直接可用</div><div class="line">	factories/</div><div class="line">		- ModelFactory.php : 基础Factory</div><div class="line">		- * CrmModelFactory.php: 项目Factory</div><div class="line">	migrations/</div><div class="line">		- 注意，多个项目的model可能会出现表格重名，model命名尽量加入项目名</div><div class="line">	seeds/</div><div class="line"></div><div class="line">public/</div><div class="line">	css/ : 该目录下应该是编译结果</div><div class="line">	js/ : 该目录下应该是编译结果</div><div class="line"></div><div class="line">resources/</div><div class="line">	assets/</div><div class="line">	lang/</div><div class="line">		en/</div><div class="line">			[crm]/</div><div class="line">				- ...</div><div class="line">	views/</div><div class="line">		vendor/ : </div><div class="line">			layouts/</div><div class="line">		[crm]/ : 项目视图目录</div><div class="line">			layouts/</div><div class="line">				- ...</div><div class="line">routes/</div><div class="line">	- api.php</div><div class="line">	- * CrmApi.php : 在 RouteServiceProvider 里面 mapApiRoutes() 注册</div><div class="line">	- channels.php</div><div class="line">	- console.php</div><div class="line">	- * CrmConsole.php </div><div class="line">	- web.php</div><div class="line">	- * CrmWeb.php - 在 RouteServiceProvider 里面 mapWebRoutes() 注册</div><div class="line"></div><div class="line">storage/</div><div class="line"></div><div class="line">test/</div><div class="line">	Feature/ - 集成Feature test</div><div class="line">	Unit/	- 集成 Unit test</div><div class="line">	[Crm]/</div><div class="line">		Feature/</div><div class="line">		Unit/</div><div class="line">		- BaseTestCase : 继承自TestCase，use migration，所有test均应继承自BaseTest</div></pre></td></tr></table></figure>
+<p>composer.json 里面增加 namespace 的mapping：<code>&quot;Apple\\Crm&quot;: &quot;Crm&quot;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&quot;autoload&quot;: &#123;</div><div class="line">        &quot;classmap&quot;: [</div><div class="line">            &quot;database&quot;</div><div class="line">        ],</div><div class="line">        &quot;psr-4&quot;: &#123;</div><div class="line">            &quot;App\\&quot;: &quot;app/&quot;,</div><div class="line">            &quot;Apple\\Crm&quot;: &quot;Crm&quot;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div></pre></td></tr></table></figure>
+<p>改完记得执行<code>composer dump-autoload</code></p>
+<p>基础设施部分：</p>
+<p>routes: http请求的入口，url到内部逻辑的接口。每个项目应该有自己的routes，通过path prefix来配置具体的项目根目录。通过 <code>RouteServiceProvider</code> 里面的 <code>mapWebRoutes()</code>和 <code>mapApiRoutes()</code> </p>
+<p>controller: 同类routes的组合，如一个restful resource的所有route可以放在一个controller里面。并对request进行认证和权限管理</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/07/10/Laravel with phpstorm/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/06/16/adminlte-laravel/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

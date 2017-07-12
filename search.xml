@@ -3,6 +3,139 @@
   
     
     <entry>
+      <title></title>
+      <url>/2017/07/12/%E5%A6%82%E4%BD%95%E5%8F%82%E4%B8%8E%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</url>
+      <content type="html"><![CDATA[<h1 id="如何参与开源项目"><a href="#如何参与开源项目" class="headerlink" title="如何参与开源项目"></a>如何参与开源项目</h1><p>以github，Monolog为例，假定你的用户名为igorw</p>
+<ol>
+<li><p>fork项目到自己的目录</p>
+</li>
+<li><p>在打算提交的branch上做出必要的变更</p>
+<ol>
+<li>git clone <a href="https://github.com/igorw/monolog" target="_blank" rel="external">https://github.com/igorw/monolog</a></li>
+<li>git checkout <branch></branch></li>
+<li>必要变更</li>
+<li>git commit -m ‘some comments for the change’</li>
+<li>git push</li>
+</ol>
+</li>
+<li><p>如果是一个大项目中的子项目，可以在大项目中更改composer.json，以使其下载自己版本进行测试</p>
+<ol>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;repositories&quot;: [</div><div class="line">        &#123;</div><div class="line">            &quot;type&quot;: &quot;vcs&quot;,</div><div class="line">            &quot;url&quot;: &quot;https://github.com/igorw/monolog&quot;</div><div class="line">        &#125;</div><div class="line">    ],</div></pre></td></tr></table></figure>
+</li>
+<li><p>composer update monolog/monolog</p>
+</li>
+<li><p>检查是否使用了自己已经更改的文件</p>
+</li>
+</ol>
+</li>
+<li><p>在github上提交pull request</p>
+</li>
+</ol>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>/2017/07/10/Laravel%20with%20phpstorm/</url>
+      <content type="html"><![CDATA[<h1 id="Laravel-with-phpstorm"><a href="#Laravel-with-phpstorm" class="headerlink" title="Laravel with phpstorm"></a>Laravel with phpstorm</h1><ol>
+<li>​</li>
+</ol>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>/2017/07/09/laravel%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%9B%AE%E5%BD%95%E5%AE%89%E6%8E%92/</url>
+      <content type="html"><![CDATA[<h1 id="laravel项目的目录安排"><a href="#laravel项目的目录安排" class="headerlink" title="laravel项目的目录安排"></a>laravel项目的目录安排</h1><h3 id="目的："><a href="#目的：" class="headerlink" title="目的："></a>目的：</h3><p>模块化项目，简化多个项目的拆分和合并过程，简化laravel版本升级带来的改变。</p>
+<h3 id="做法："><a href="#做法：" class="headerlink" title="做法："></a>做法：</h3><p>以下以公司命名空间为 <em>Apple</em>， 项目名称<em>Crm</em>为例</p>
+<p><strong>主项目目录</strong> 下包含模型和控制器，在项目组合拆分时不变。</p>
+<p><strong>项目视图目录 </strong>下包含项目视图，项目组合拆分时不变。</p>
+<p><strong>可公用的视图</strong> 可以放在resources/views/vendor/[<em>Apple</em>]目录下，一般以layouts为主。</p>
+<p><strong>路由</strong> 放在独立的路由文件，通过RouteServiceProvider注册进去。</p>
+<p><strong>测试</strong> 按项目文件夹放置</p>
+<p><strong>注意</strong> 不要直接从原生的Eloquent Model，Controller继承，而要在项目中新建BaseModel和BaseController作为依赖隔离，项目中的模型和控制器均继承自BaseModel和BaseController</p>
+<h3 id="示例目录结构-基于laravel-5-4"><a href="#示例目录结构-基于laravel-5-4" class="headerlink" title="示例目录结构 (基于laravel 5.4)"></a>示例目录结构 (基于laravel 5.4)</h3><p>带*号的为项目新增文件，带[]的为项目新增目录.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">app/ : 基础设施，配置为主，少改代码，以便日后升级。</div><div class="line">	Console/</div><div class="line">		- Kernel.php : 注册 routes 下面 console 类的 routes; 注册 schedule 项目</div><div class="line">	Exceptions/</div><div class="line">		- Handler.php : excetpion 处理</div><div class="line">	Http/</div><div class="line">		Controllers/ : 基础controllers</div><div class="line">			Auth/ : 基础认证包，适度修改</div><div class="line">			- Controller.php : 基础 controller 类，不要修改</div><div class="line">		Middleware/</div><div class="line">		- Kernel.php</div><div class="line">	Providers/</div><div class="line">		- RouteServiceProvider : 注册 routes 下面 web 和 api 类的 routes</div><div class="line"></div><div class="line">[Crm]/ : 主项目目录</div><div class="line">	Http/</div><div class="line">		Controllers/</div><div class="line">			* BaseController.php : 继承自 App/Controller，所有项目controller均需从BaseController扩展</div><div class="line">			* XyzController.php : 项目相关 Controllers</div><div class="line">	Models/</div><div class="line">		- BaseModel : 继承自 Illuminate\Database\Eloquent\Model，所有项目model均需从BaseModel扩展</div><div class="line">		- 注意，多个项目的model可能会出现重名，导致表格重名，model命名尽量加入项目名</div><div class="line"></div><div class="line">bootstrap/</div><div class="line">config/</div><div class="line">database/ : 该目录下所有class都无需namespace，而直接可用</div><div class="line">	factories/</div><div class="line">		- ModelFactory.php : 基础Factory</div><div class="line">		- * CrmModelFactory.php: 项目Factory</div><div class="line">	migrations/</div><div class="line">		- 注意，多个项目的model可能会出现表格重名，model命名尽量加入项目名</div><div class="line">	seeds/</div><div class="line"></div><div class="line">public/</div><div class="line">	css/ : 该目录下应该是编译结果</div><div class="line">	js/ : 该目录下应该是编译结果</div><div class="line"></div><div class="line">resources/</div><div class="line">	assets/</div><div class="line">	lang/</div><div class="line">		en/</div><div class="line">			[crm]/</div><div class="line">				- ...</div><div class="line">	views/</div><div class="line">		vendor/ : </div><div class="line">			layouts/</div><div class="line">		[crm]/ : 项目视图目录</div><div class="line">			layouts/</div><div class="line">				- ...</div><div class="line">routes/</div><div class="line">	- api.php</div><div class="line">	- * CrmApi.php : 在 RouteServiceProvider 里面 mapApiRoutes() 注册</div><div class="line">	- channels.php</div><div class="line">	- console.php</div><div class="line">	- * CrmConsole.php </div><div class="line">	- web.php</div><div class="line">	- * CrmWeb.php - 在 RouteServiceProvider 里面 mapWebRoutes() 注册</div><div class="line"></div><div class="line">storage/</div><div class="line"></div><div class="line">test/</div><div class="line">	Feature/ - 集成Feature test</div><div class="line">	Unit/	- 集成 Unit test</div><div class="line">	[Crm]/</div><div class="line">		Feature/</div><div class="line">		Unit/</div><div class="line">		- BaseTestCase : 继承自TestCase，use migration，所有test均应继承自BaseTest</div></pre></td></tr></table></figure>
+<p>composer.json 里面增加 namespace 的mapping：<code>&quot;Apple\\Crm&quot;: &quot;Crm&quot;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&quot;autoload&quot;: &#123;</div><div class="line">        &quot;classmap&quot;: [</div><div class="line">            &quot;database&quot;</div><div class="line">        ],</div><div class="line">        &quot;psr-4&quot;: &#123;</div><div class="line">            &quot;App\\&quot;: &quot;app/&quot;,</div><div class="line">            &quot;Apple\\Crm&quot;: &quot;Crm&quot;</div><div class="line">        &#125;</div><div class="line">    &#125;,</div></pre></td></tr></table></figure>
+<p>改完记得执行<code>composer dump-autoload</code></p>
+<p>基础设施部分：</p>
+<p>routes: http请求的入口，url到内部逻辑的接口。每个项目应该有自己的routes，通过path prefix来配置具体的项目根目录。通过 <code>RouteServiceProvider</code> 里面的 <code>mapWebRoutes()</code>和 <code>mapApiRoutes()</code> </p>
+<p>controller: 同类routes的组合，如一个restful resource的所有route可以放在一个controller里面。并对request进行认证和权限管理</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[尝试 adminlte-laravel 快速开发程序]]></title>
+      <url>/2017/06/16/adminlte-laravel/</url>
+      <content type="html"><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>如果在Mac系统下，需先安装GNU sed</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install gnu-sed --with-default-names</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">composer global require "acacha/adminlte-laravel-installer=~3.0"</div><div class="line">laravel new &lt;PROJECT_NAME&gt;</div><div class="line">cd &lt;PROJECT_NAME&gt;</div><div class="line">adminlte-laravel install</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> php </category>
+            
+            <category> laravel </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> php </tag>
+            
+            <tag> laravel </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[在github上快速设置hexo站点]]></title>
+      <url>/2017/06/15/hexo-starter/</url>
+      <content type="html"><![CDATA[<h2 id="在github上快速设置hexo站点"><a href="#在github上快速设置hexo站点" class="headerlink" title="在github上快速设置hexo站点"></a>在github上快速设置hexo站点</h2><p>时间：</p>
+<ol>
+<li><p>hexo环境设置（如已安装请略过）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
+</li>
+<li><p>初始化站点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;theme_repository_url&gt; themes/&lt;theme_name&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置git (_config.yml)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository_url&gt;</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置语言 (_config.yml)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure>
+</li>
+<li><p>建立更新shell脚本 update</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line"># stop on first error</div><div class="line">set -e</div><div class="line"># show command before excute</div><div class="line">set -o xtrace</div><div class="line"></div><div class="line">hexo clean</div><div class="line"></div><div class="line">hexo generate</div><div class="line"></div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>常用链接</p>
+<p>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></p>
+<p>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
+<p>Docs: <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a></p>
+<p>Material theme and docs: <a href="https://material.viosey.com" target="_blank" rel="external">https://material.viosey.com</a></p>
+<p>​</p>
+</li>
+</ol>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[使用 packagist 国内镜像加速]]></title>
       <url>/2017/06/15/composer-change-repo/</url>
       <content type="html"><![CDATA[<p>目前有两个比较稳定的packagist国内镜像，一个是<a href="https://packagist.phpcomposer.com" target="_blank" rel="external">https://packagist.phpcomposer.com</a> ， 另一个是 <a href="https://packagist.laravel-china.org" target="_blank" rel="external">https://packagist.laravel-china.org</a></p>
@@ -13,6 +146,7 @@
 <p>或者手工添加到composer.json文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;repositories&quot;: &#123;</div><div class="line">    &quot;packagist&quot;: &#123;</div><div class="line">        &quot;type&quot;: &quot;composer&quot;,</div><div class="line">        &quot;url&quot;: &quot;https://packagist.phpcomposer.com&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>注意：尽量用方法一，方法二可能会使国外的travis-ci运行速度降低</p>
+<p>安装package时，和普通用法一样，安装速度过慢时可以加上 -vvv 实时查看安装进度。如：<code>composer require &lt;packagename&gt; -vvv</code></p>
 <p>可以进入两个网站检查当前package更新状态：</p>
 <p><a href="https://pkg.phpcomposer.com" target="_blank" rel="external">https://pkg.phpcomposer.com</a></p>
 ]]></content>
@@ -112,43 +246,6 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[在github上快速设置hexo站点]]></title>
-      <url>/2017/06/08/hexo-starter/</url>
-      <content type="html"><![CDATA[<h2 id="在github上快速设置hexo站点"><a href="#在github上快速设置hexo站点" class="headerlink" title="在github上快速设置hexo站点"></a>在github上快速设置hexo站点</h2><p>时间：</p>
-<ol>
-<li><p>hexo环境设置（如已安装请略过）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
-</li>
-<li><p>初始化站点</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo init</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>安装主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;theme_repository_url&gt; themes/&lt;theme_name&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置git (_config.yml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: &lt;repository_url&gt;</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置语言 (_config.yml)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">timezone: Asia/Shanghai</div></pre></td></tr></table></figure>
-</li>
-<li><p>建立更新shell脚本 update</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line"># stop on first error</div><div class="line">set -e</div><div class="line"># show command before excute</div><div class="line">set -o xtrace</div><div class="line"></div><div class="line">hexo clean</div><div class="line"></div><div class="line">hexo generate</div><div class="line"></div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>常用链接</p>
-<p>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></p>
-<p>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
-<p>Docs: <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a></p>
-<p>Material theme and docs: <a href="https://material.viosey.com" target="_blank" rel="external">https://material.viosey.com</a></p>
-<p>​</p>
-</li>
-</ol>
 ]]></content>
       
         

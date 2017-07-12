@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="Thu Jun 15 2017 13:33:50 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Jun 15 2017 13:56:04 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Jun 16 2017 16:44:32 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -115,7 +115,7 @@
     "headline": "使用 packagist 国内镜像加速",
     "url": "http://yoursite.com/2017/06/15/composer-change-repo/index.html",
     "datePublished": "Thu Jun 15 2017 13:33:50 GMT+0800",
-    "dateModified": "Thu Jun 15 2017 13:56:04 GMT+0800",
+    "dateModified": "Fri Jun 16 2017 16:44:32 GMT+0800",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -510,6 +510,7 @@
 <p>或者手工添加到composer.json文件：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;repositories&quot;: &#123;</div><div class="line">    &quot;packagist&quot;: &#123;</div><div class="line">        &quot;type&quot;: &quot;composer&quot;,</div><div class="line">        &quot;url&quot;: &quot;https://packagist.phpcomposer.com&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>注意：尽量用方法一，方法二可能会使国外的travis-ci运行速度降低</p>
+<p>安装package时，和普通用法一样，安装速度过慢时可以加上 -vvv 实时查看安装进度。如：<code>composer require &lt;packagename&gt; -vvv</code></p>
 <p>可以进入两个网站检查当前package更新状态：</p>
 <p><a href="https://pkg.phpcomposer.com" target="_blank" rel="external">https://pkg.phpcomposer.com</a></p>
 
@@ -530,6 +531,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2017/06/15/hexo-starter/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -629,7 +638,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">6</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">7</span></a>
             </ul>
         </li>
         
@@ -647,7 +656,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/php/">php<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/php/laravel/">laravel<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/php/">php<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/php/laravel/">laravel<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
